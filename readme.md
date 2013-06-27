@@ -26,4 +26,4 @@ Clone this repo and run the script from a BASH terminal to output usage informat
 * By default, strandedness is not taken into account. Use the "-s" option to specify a column in the input file that has strand information (coded using "+" or "-") and then the overlaps will be done strand-aware.
 
 ## TODO
-* Design a configuration file to specify the contexts and annotations to use, rather than this being hard coded into the R script
+* Design a configuration file to specify the contexts and annotations to use, rather than this being hard coded into the R script (right now this is done by putting all overlap code into a separate R file so this function file can be swappable to change the details of what overlaps and contexts are output)
