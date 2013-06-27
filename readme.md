@@ -7,11 +7,12 @@
 * Works on Linux, Unix, and Mac OS X (no Windows version due to rsync dependency of genomesyncr)
 
 ## Installation
-* First install the genomesyncr dependency. From an R console:
+First install the genomesyncr dependency. From an R console:
 	library(devtools)
 	options(repos=c("http://cran.rstudio.com","http://www.bioconductor.org/packages/release/bioc"))
 	install_github("genomesyncr", username="bluecranium")
-* Clone this repo and run the script from a BASH terminal to output usage information:
+
+Clone this repo and run the script from a BASH terminal to output usage information:
 	./gencon --help
 
 ## Usage
