@@ -15,10 +15,15 @@ First install the genomesyncr dependency. From an R console:
 
 Clone this repo and run the script from a BASH terminal to output usage information:
 
+	git clone git://github.com/bluecranium/gencon.git
+	cd gencon
 	./gencon --help
 
 ## Usage
 * See the "--help" option
+* BED files must contain at least 3 columns (chromosome, start, end), be tab-delimited, have chromosome numbers prefixed with "chr" (e.g. "chr1", "chr2", "chr3"), and use zero-based, half-open coordinates (see http://genome.ucsc.edu/FAQ/FAQformat#format1 and https://code.google.com/p/bedtools/wiki/FAQ#What_does_zero-based,_half-open_mean? for more information on the BED format)
+* All columns after column 3 will be retained in the "wide" output, so they can contain any arbitrary metadata you'd like to keep attached with your ranges in the output
+* By default, strandedness is not taken into account. Use the "-s" option to specify a column in the input file that has strand information (coded using "+" or "-") and then the overlaps will be done strand-aware.
 
 ## TODO
 * Design a configuration file to specify the contexts and annotations to use, rather than this being hard coded into the R script
